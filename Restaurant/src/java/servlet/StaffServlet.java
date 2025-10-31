@@ -56,7 +56,6 @@ public class StaffServlet extends HttpServlet {
             }
             
             response.sendRedirect(request.getContextPath() + "/LoginView.jsp"); 
-            
         } else {
             request.getRequestDispatcher("/LoginView.jsp").forward(request, response);
         }
