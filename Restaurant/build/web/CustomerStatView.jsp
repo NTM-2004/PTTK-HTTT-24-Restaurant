@@ -137,8 +137,11 @@
         }
     </style>
     <script>
+//        function showCustomerDetail(customerId) {
+//            window.location.href = '${pageContext.request.contextPath}/customerStat?action=detail&id=' + customerId;
+//        }
         function showCustomerDetail(customerId) {
-            window.location.href = '${pageContext.request.contextPath}/customerStat?action=detail&id=' + customerId;
+            window.location.href = "${pageContext.request.contextPath}/customer/" + customerId + "/order/";
         }
     </script>
     <body>
@@ -157,7 +160,7 @@
                 <p class="error-message">Error: <%= errorMessage %></p>
             <% } %>
 
-            <form action="${pageContext.request.contextPath}/customerStat" method="GET" class="search-form">
+            <form action="${pageContext.request.contextPath}/customer" method="GET" class="search-form">
                 
                 <div class="input-group">
                     <label for="start">Start date (dd/MM/yyyy):</label>
@@ -205,11 +208,10 @@
                         </tbody>
                     </table>
                 <% } %>
-            <% } else { %>
-            <% } %>
-            <a href="SelectStatisticView.jsp" class="back-button">
-                Return
-            </a>
+            <% }%>
+            <form action="${pageContext.request.contextPath}/customer/clear" method="POST" style="display:inline;">
+                <button type="submit" class="back-button">Return</button>
+            </form>
         </div>
     </body>
 </html>

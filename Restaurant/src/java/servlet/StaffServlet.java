@@ -41,6 +41,12 @@ public class StaffServlet extends HttpServlet {
                 request.getRequestDispatcher("/LoginView.jsp").forward(request, response);
                 e.printStackTrace();
             }
+        }else{
+            HttpSession session = request.getSession(false); 
+            if (session != null) {
+                session.invalidate(); 
+            }
+            response.sendRedirect(request.getContextPath() + "/"); 
         } 
     }
     
@@ -49,14 +55,7 @@ public class StaffServlet extends HttpServlet {
             throws ServletException, IOException {
         String path = request.getServletPath();
 
-        if ("/logout".equals(path)) {
-            HttpSession session = request.getSession(false); 
-            if (session != null) {
-                session.invalidate(); 
-            }
-            
-            response.sendRedirect(request.getContextPath() + "/LoginView.jsp"); 
-        } else {
+        if ("/".equals(path)) {
             request.getRequestDispatcher("/LoginView.jsp").forward(request, response);
         }
     }

@@ -81,7 +81,7 @@
         <div class="menu-grid">
             <a href="${pageContext.request.contextPath}/dish" class="menu-button">Manage Dish</a>
             <a href="${pageContext.request.contextPath}/SelectStatisticView.jsp" class="menu-button">View Statistic</a>
-            <form action="${pageContext.request.contextPath}/logout" method="GET">
+            <form action="${pageContext.request.contextPath}/logout" method="POST">
                 <button type="submit" class="menu-button">
                     Logout
                 </button>

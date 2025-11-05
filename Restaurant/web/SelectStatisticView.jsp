@@ -86,10 +86,10 @@
             <h2>Select Statistic</h2>
 
             <div class="menu-grid">
-                <a href="${pageContext.request.contextPath}/customerStat" class="menu-button">Customer Statistic</a>
+                <a href="${pageContext.request.contextPath}/customer" class="menu-button">Customer Statistic</a>
                 <a href="${pageContext.request.contextPath}/ViewStatisticView.jsp" class="menu-button">Dish Statistic</a>
                 <a href="${pageContext.request.contextPath}/ViewStatisticView.jsp" class="menu-button">Supplier Statistic</a>
-                <a href="ManagementHomeView.jsp" class="back-button">
+                <a href="${pageContext.request.contextPath}/ManagementHomeView.jsp" class="back-button">
                     Return
                 </a>
             </div>

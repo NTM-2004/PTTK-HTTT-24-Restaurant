@@ -4,6 +4,7 @@
     Author     : ADMIN
 --%>
 
+<%@page import="model.Customer"%>
 <%@page import="java.sql.Date"%>
 <%@page import="model.CustomerStat"%>
 <%@page import="model.Order"%>
@@ -110,7 +111,7 @@
     </head>
     <script>
         function showOrderDetail(orderId) {
-            window.location.href = '${pageContext.request.contextPath}/listOrder?action=detail&id=' + orderId;
+            window.location.href = "${pageContext.request.contextPath}/order/"+ orderId;
         }
     </script>
     <body>
@@ -156,9 +157,9 @@
                     %>
                 </tbody>
             </table>
-            <a href="<%= request.getContextPath() %>/customerStat?action=cleanup" class="back-button">
-                Return
-            </a>
+            <form action="${pageContext.request.contextPath}/order/clear" method="POST" style="display:inline;">
+                <button type="submit" class="back-button">Return</button>
+            </form>
         </div>
     </body>
 </html>

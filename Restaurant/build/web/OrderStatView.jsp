@@ -111,7 +111,9 @@
 
         <% } %>
         
-        <p><a href="<%= request.getContextPath() %>/listOrder?action=cleanup"> return </a></p>
+        <form action="${pageContext.request.contextPath}/order/id/clear" method="POST" style="display:inline;">
+            <button type="submit" class="back-button">Return</button>
+        </form>
         
     </body>
 </html>
