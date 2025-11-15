@@ -22,6 +22,24 @@
             margin: 0;
             padding: 40px 20px;
         }
+        
+        .navbar {
+            width: 100%;
+            background-color: #343a40;
+            color: white;
+            padding: 14px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .brand {
+            font-size: 20px;
+            font-weight: bold;
+        }
 
         .main-container {
             background-color: #fff;
@@ -115,6 +133,9 @@
         }
     </script>
     <body>
+        <div class="navbar">
+            <div class="brand">Restaurant System - Customer Statistic modul</div>
+        </div>
         <div class="main-container">
             <h1>List of Orders</h1>
             

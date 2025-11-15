@@ -21,6 +21,24 @@
                 margin: 0;
             }
             
+            .navbar {
+                width: 100%;
+                background-color: #343a40;
+                color: white;
+                padding: 14px 20px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .navbar .brand {
+                font-size: 20px;
+                font-weight: bold;
+            }
+            
             h1{
                 text-align: center;
                 margin-bottom: 20px;
@@ -86,9 +104,11 @@
         </style>
     </head>
     <body>
+        <div class="navbar">
+            <div class="brand">Restaurant System</div>
+        </div>
         <div class="login-container">
-            <h1>Restaurant System</h1>
-            <h2>Login Page</h2>
+            <h1>Login Page</h1>
             
             <% 
                 String errorMessage = (String) request.getAttribute("errorMessage");

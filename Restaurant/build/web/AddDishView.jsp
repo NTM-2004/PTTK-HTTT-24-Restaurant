@@ -21,6 +21,24 @@
             height: 100vh;
             margin: 0;
         }
+        
+        .navbar {
+            width: 100%;
+            background-color: #343a40;
+            color: white;
+            padding: 14px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .brand {
+            font-size: 20px;
+            font-weight: bold;
+        }
 
         .form-container {
             background-color: #fff;
@@ -102,6 +120,9 @@
         }
     </style>
     <body>
+        <div class="navbar">
+            <div class="brand">Restaurant System - Add dish modul</div>
+        </div>
         <div class="form-container">
         <h1>Add Dish</h1>
         
